@@ -1,24 +1,40 @@
- @font-face {
-   font-family: Netigen;
-   src: url('fonts/netigen.otf');
- }
+@font-face {
+  font-family: Netigen;
+  src: url('fonts/netigen.otf');
+}
 
- /*
- @font-face {
-  font-family: Fira Mono;
-  src: url();
- }
-*/
- :root {
-  --text-color: #bbaaaa;
- }
+@font-face {
+  font-family: Outfit;
+  src: url("fonts/Outfit/Outfit-VariableFont_wght.ttf"); 
+}
+
+@font-face {
+  font-family: Outfit-Thin;
+  src: url("fonts/Outfit/static/Outfit-Thin.ttf");
+}
+
+:root {
+  --transparent: rgba(0,0,0,0);
+  --body-color: linear-gradient(rgb(22, 12, 12), rgb(25, 43, 35), rgb(49, 68, 64) 80%);
+  --menu-color: linear-gradient(rgba(0,0,0,0.6),rgba(68, 30, 30, 0.4),rgba(80, 8, 8, 0.6));
+  --text-color: #cccac3;
+  --header-font: 'Outfit', 'Courier New', Courier, monospace;
+}
+
+.hidden {
+  display: none;
+}
+
+.divider {
+  border: 1px solid var(--text-color);
+}
 
 body {
   display: grid;
   grid-template-columns: 300px auto;
-  background-color: #323446;
-  width: 100vw;
+  grid-template-areas: 100vh;
   height: 100vh;
+  background: var(--body-color);
   align-items: stretch;
   margin: 0;
 }
@@ -27,32 +43,113 @@ p {
   color: var(--text-color);
 }
 
-nav {
-  padding: 0px 16px;
-  font-size: 25px;
-  letter-spacing: 2px;
-  background-color: #22233f;
-  color: var(--text-color);
-}
-
-main {
-  border: 3px solid black;
-  margin: 0;
-}
-
 h1 {
-  font-family: Netigen, "Courier New", sans-serif;
+  margin: 5px 0;
+  font-family: Outfit-Thin, var(--header-font);
+  color: var(--text-color);
+  font-size: 80px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* SIDE MENU */
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 25px;
+  border-right: 5px dashed var(--text-color);
+  background: var(--menu-color);
+  text-align: right;
+  font-size: 25px;
   color: var(--text-color);
 }
 
-.side-menu p {
-  font-family: "Courier New", sans-serif;
+nav > div h1 {
+  margin-bottom: 35px;
+  font-family: var(--header-font);
+  text-align: right;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+nav p {
+  font-family: var(--header-font);
   font-size: 16px;
 }
 
-footer {
-  background-color: #22233f;
-  padding: 16px;
-  border-top: 3px var(--text-color) solid;
+nav a {
+  font-family: var(--header-font);
+  text-decoration: none;
   color: var(--text-color);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a:visited {
+  font-style: normal;
+  color: var(--text-color);
+}
+
+nav > div > * {
+  display: block;
+  letter-spacing: 2px;
+  text-align: right;
+}
+
+footer {
+  width: 230px;
+  color: var(--text-color);
+}
+
+footer a:first-of-type {
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.icons {
+  display: flex;
+  height: 50px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons svg {
+  border-radius: 100%;
+  color: var(--text-color);
+  background-color: var(--transparent);
+}
+
+svg.soundcloud{
+  padding: 4px;
+}
+
+footer p {
+  font-size: 13px;
+}
+
+main {
+  margin: 0;
+  padding: 30px;
+  overflow: auto;
+}
+
+
+section {
+}
+
+section img {
+  width: 500px;
+  margin-bottom: 20px;
+  border: 3px solid var(--text-color);
 }
