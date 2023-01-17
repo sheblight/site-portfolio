@@ -3,34 +3,46 @@
    src: url('fonts/netigen.otf');
  }
 
+ /*
+ @font-face {
+  font-family: Fira Mono;
+  src: url();
+ }
+*/
+ :root {
+  --text-color: #bbaaaa;
+ }
+
 body {
-  display: flex;
+  display: grid;
+  grid-template-columns: 300px auto;
   background-color: #323446;
-  max-width: 100vw;
+  width: 100vw;
   height: 100vh;
-  justify-content: space-between;
   align-items: stretch;
   margin: 0;
 }
 
-.side-menu {
+p {
+  color: var(--text-color);
+}
+
+nav {
   padding: 0px 16px;
   font-size: 25px;
   letter-spacing: 2px;
   background-color: #22233f;
-  width: 300px;
-  color: #bbaaaa;
+  color: var(--text-color);
 }
 
 main {
-  flex-grow: 1;
   border: 3px solid black;
   margin: 0;
 }
 
 h1 {
   font-family: Netigen, "Courier New", sans-serif;
-  color: #bbaaaa;
+  color: var(--text-color);
 }
 
 .side-menu p {
@@ -41,6 +53,6 @@ h1 {
 footer {
   background-color: #22233f;
   padding: 16px;
-  border-top: 3px #bbaaaa solid;
-  color: #bbaaaa;
+  border-top: 3px var(--text-color) solid;
+  color: var(--text-color);
 }
