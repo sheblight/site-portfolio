@@ -1,0 +1,8 @@
+[Header Logo]
+font-family: "Roboto Mono", monospace;
+
+[Section Header]
+font-family: "Fira Mono", monospace;
+
+[Paragraph]
+font-family: "IBM Plex Mono", monospace;
