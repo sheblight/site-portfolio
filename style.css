@@ -76,27 +76,23 @@ nav > div h1 {
   text-transform: none;
 }
 
-nav p {
-  font-family: var(--header-font);
-  font-size: 16px;
-}
-
-nav a {
+.nav-buttons a {
   font-family: var(--header-font);
   text-decoration: none;
+  text-transform: capitalize;
   color: var(--text-color);
 }
 
-nav a:hover {
+.nav-buttons a:hover {
   text-decoration: underline;
 }
 
-nav a:visited {
+.nav-buttons a:visited {
   font-style: normal;
   color: var(--text-color);
 }
 
-nav > div > * {
+.nav-buttons > * {
   display: block;
   letter-spacing: 2px;
   text-align: right;
@@ -108,12 +104,20 @@ footer {
 }
 
 footer a:first-of-type {
+  font-family: var(--header-font);
+  text-decoration: none;
+  color: var(--text-color);
   letter-spacing: 1px;
   font-size: 15px;
 }
 
 footer a:hover {
   text-decoration: underline;
+}
+
+footer p {
+  font-family: var(--header-font);
+  font-size: 16px;
 }
 
 .icons {
@@ -145,11 +149,12 @@ main {
 }
 
 
+/* section */
 section {
 }
 
 section img {
-  width: 500px;
+  width: 400px;
   margin-bottom: 20px;
   border: 3px solid var(--text-color);
 }
